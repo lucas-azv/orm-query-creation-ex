@@ -19,14 +19,32 @@ public class VendaController {
     private VendaService vendaService;
 
     @GetMapping("/sem-desconto")
-    public ResponseEntity<List<Venda>> findVendasSemDesconto() {
-        List<Venda> vendas = vendaService.findVendasSemDesconto();
-        return ResponseEntity.ok().body(vendas);
+    public List<Venda> getItemsWithoutDiscount() {
+        return vendaService.getAllItemsWithoutDiscount();
     }
 
     @GetMapping("/com-desconto")
-    public ResponseEntity<List<Venda>> findVendasComDesconto() {
-        List<Venda> vendas = vendaService.findVendasComDesconto();
-        return ResponseEntity.ok().body(vendas);
+    public List<Venda> getItemsWithDiscount() {
+        return vendaService.getAllItemsWithDiscount();
+    }
+
+    @GetMapping("/ordenado")
+    public List<Venda> getItemsOrderByValorUnitDesc() {
+        return vendaService.getAllItemsOrderByValorUnitDesc();
+    }
+
+    @GetMapping("/mais-vendido")
+    public List<Object[]> getTopProductByNf() {
+        return vendaService.getTopProductByNf();
+    }
+
+    @GetMapping("/mais-de-10")
+    public List<Integer> getNfsWithMoreThan10UnitsSold() {
+        return vendaService.getNfsWithMoreThan10UnitsSold();
+    }
+
+    @GetMapping("/total-maior-500")
+    public List<Object[]> getTotalNfValueGreaterThan500() {
+        return vendaService.getTotalNfValueGreaterThan500();
     }
 }

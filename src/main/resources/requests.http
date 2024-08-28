@@ -1,0 +1,33 @@
+# Teste 1: Obter todos os itens vendidos sem desconto
+GET http://localhost:8080/vendas/sem-desconto
+Accept: application/json
+
+###
+
+# Teste 2: Obter todos os itens vendidos com desconto
+GET http://localhost:8080/vendas/com-desconto
+Accept: application/json
+
+###
+
+# Teste 3: Obter todos os itens e ordenar o resultado por VALOR_UNIT do maior para o menor
+GET http://localhost:8080/vendas/ordenado
+Accept: application/json
+
+###
+
+# Teste 4: Obter o produto que mais vendeu em uma mesma NF
+GET http://localhost:8080/vendas/mais-vendido
+Accept: application/json
+
+###
+
+# Teste 5: Obter as NFs onde foram vendidas mais de 10 unidades de pelo menos um produto
+GET http://localhost:8080/vendas/mais-de-10
+Accept: application/json
+
+###
+
+# Teste 6: Obter o valor total das NFs onde o valor seja maior que 500, ordenando do maior para o menor
+GET http://localhost:8080/vendas/total-maior-500
+Accept: application/json
