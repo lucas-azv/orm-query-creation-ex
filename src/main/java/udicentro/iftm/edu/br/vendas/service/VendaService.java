@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import udicentro.iftm.edu.br.vendas.Venda;
+import udicentro.iftm.edu.br.vendas.domain.Venda;
 import udicentro.iftm.edu.br.vendas.repository.VendaRepository;
 
 @Service
